@@ -1,0 +1,61 @@
+header {
+    border: 1px solid red;
+}
+
+header nav ul {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    list-style-type: none;
+    margin: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main styles */
+
+#main-content-container {
+    border: 1px solid red;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-content-card {
+    border: 1px solid blue;
+    width: 30%;
+    margin: 1%;
+    transition: 0.03s all;
+}
+
+.main-content-card:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgb(212, 207, 207);
+}
+
+#button-container {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+#button-container a {
+    margin: 1%;
+    padding: 10px;
+    background-color: black;
+    border: none;
+    color: white;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+}
