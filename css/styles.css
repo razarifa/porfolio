@@ -1,61 +1,111 @@
-header {
-    border: 1px solid red;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,300&display=swap");
+body {
+ background-color: rgba(0, 0, 0, 0.76);
+ font-family: "Josefin Slab", serif;
 }
-
+a {
+ color: rgb(212, 207, 207);
+}
 header nav ul {
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
+ display: flex;
+ justify-content: center;
+ margin: 10px 40px;
 }
 
 header nav ul li {
-    list-style-type: none;
-    margin: 10px;
+ list-style-type: none;
+ margin: 10px;
 }
 
 header nav ul li a {
-    text-decoration: none;
+ text-decoration: none;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+ text-shadow: 0px 0px 1px white;
 }
 
-
 /* Main styles */
-
+/* main {
+ display: flex;
+ justify-content: center;
+} */
 #main-content-container {
-    border: 1px solid red;
-    display: flex;
-    justify-content: flex-start;
+ display: flex;
+ justify-content: flex-start;
+ flex-wrap: wrap;
+ margin: 40px;
 }
 
 .main-content-card {
-    border: 1px solid blue;
-    width: 30%;
-    margin: 1%;
-    transition: 0.03s all;
+ width: 31.3%;
+ margin: 1%;
+ transition: 0.03s all;
+ background-color: transparent;
+ border: 1px solid transparent;
+ border-radius: 30px;
+ max-height: 30%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: flex-end;
+ padding: 1px;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+  rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+ position: relative;
+ transition: 1s all;
 }
 
 .main-content-card:hover {
-    cursor: pointer;
-    box-shadow: 5px 5px 5px rgb(212, 207, 207);
+ cursor: pointer;
+}
+.main-content-card:hover .overlay {
+ height: 100%;
+ border-radius: 30px;
+}
+.main-content-card:hover a {
+ display: inline;
 }
 
-#button-container {
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
+.overlay {
+ width: 100%;
+ height: 0%;
+ position: absolute;
+ background-color: rgb(0, 0, 0);
+ /* display: none; */
+ border-radius: 5px;
+ transition: 0.5s all;
+}
+.main-content-card img {
+ /* border-top-left-radius: 30px;
+ border-top-right-radius: 30px; */
+ border-radius: 30px;
+}
+.button-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
 }
 
-#button-container a {
-    margin: 1%;
-    padding: 10px;
-    background-color: black;
-    border: none;
-    color: white;
-    text-decoration: none;
-    color: white;
-    display: inline-block;
-    border-radius: 5px;
+.button-container a {
+ text-decoration: none;
+ color: rgb(255, 255, 255);
+ border: 1px solid transparent;
+ margin: 10%;
+ transition: 0.3s all;
+ display: none;
+ transition: 0.02s all;
+}
+.button-container a:hover {
+ border-radius: 5px;
+ border-bottom: 1px solid rgb(245, 245, 245);
+}
+@media (max-width: 768px) {
+ .main-content-card {
+  width: 100%;
+ }
 }
